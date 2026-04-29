@@ -3,9 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test repo</title>
+    <link rel="stylesheet" href="style.css">
+    <link 
+  rel="stylesheet" 
+  href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+/>
+    <title>Test</title>
 </head>
 <body>
-    <div class=""></div>
+    <div class="test">Hello world!</div>
+
+    <!-- Slider main container -->
+<div class="swiper">
+
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+
+    <!-- Slides -->
+    <div class="swiper-slide">
+        <img src="https://media.istockphoto.com/id/1222795784/uk/фото/кліщ-на-людському-пальці-проти-собаки.jpg?s=1024x1024&w=is&k=20&c=voDpaqBW2IURYi1j3iv3dKMFg1zDBYUzQupHSfr25nQ=" alt="">
+    </div>
+    <div class="swiper-slide">
+        <img src="https://media.istockphoto.com/id/1033327956/uk/фото/бджола.webp?s=1024x1024&w=is&k=20&c=CAR8_w7SjTjiirKevZMWo0uJ8GBbc-_-MClddwsMHRg=" alt="">
+    </div>
+    <div class="swiper-slide">
+        <img src="https://media.istockphoto.com/id/108310229/uk/фото/блакитна-бабка-сидить-на-травинці.jpg?s=1024x1024&w=is&k=20&c=LLE223XTvAILWCFA6FfFrtamJ1bQuXNRO3R5e3o3BTY=" alt="">
+    </div>
+    <div class="swiper-slide">
+        <img src="https://media.istockphoto.com/id/1222795784/uk/фото/кліщ-на-людському-пальці-проти-собаки.jpg?s=1024x1024&w=is&k=20&c=voDpaqBW2IURYi1j3iv3dKMFg1zDBYUzQupHSfr25nQ=" alt="">
+    </div>
+
+  </div>
+
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        loop: true,
+        autoplay:{
+            delay: 3000,
+        },
+        slidesPerView:1,
+        spaceBetween:10,
+
+        breakpoints:{
+            640: {
+                slidesPerView: 2,
+                spaceBetween:20
+            },
+            1024: {
+                slidesPerView: 3,
+                spaceBetween:30
+            },
+        },
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+        });
+    </script>
 </body>
 </html>
